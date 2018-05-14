@@ -5,7 +5,7 @@
 
 # Create new GKE Kubernetes cluster (using host node VM images based on Ubuntu
 # rather than ChromiumOS default & also use slightly larger VMs than default)
-gcloud container clusters create "gke-mongodb-demo-cluster" --image-type=UBUNTU --machine-type=n1-standard-2
+gcloud container clusters create "gke-mongodb-demo-cluster" --image-type=CENTOS --machine-type=n1-standard-2
 
 # Configure host VM using daemonset to disable hugepages
 kubectl apply -f ../resources/hostvm-node-configurer-daemonset.yaml
